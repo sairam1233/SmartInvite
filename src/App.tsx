@@ -199,7 +199,7 @@ function App() {
               <div key={index} className="animate__animated animate__fadeInUp service-card bg-white p-6 sm:p-8 rounded-xl shadow-lg ">
                 <service.icon className="h-10 w-10 sm:h-12 sm:w-12 text-indigo-600 mb-4 sm:mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-4 sm:mb-6">{service.description}</p>
+                <p className="pp text-gray-600 mb-4 sm:mb-6">{service.description}</p>
                 <button className="btn-service bg-indigo-50 text-indigo-600 px-4 sm:px-6 py-2 rounded-lg font-semibold group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 flex items-center text-sm sm:text-base">
                   <span><a href='#contact'>Book Now</a></span>
                   <ArrowRight className="ml-2 h-4 w-4" />

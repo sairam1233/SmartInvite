@@ -100,11 +100,12 @@ backdrop-filter: blur(10.6px);
     .img-2 {
       order: 1 !important;
     }
-    .btn-1{
-        width: 59%;
+    .service-card{
+      align-items: center;
     }
-    .btn-2{
-        width: 37%;
+    .pp{
+      text-align: center;
     }
+  
   }
   
