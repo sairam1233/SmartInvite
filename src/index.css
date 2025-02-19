@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    scroll-behavior: smooth;
+}
+
+.bor{
+    border-radius: 20px !important;
+}
+.btn{
+    height: 43px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5a67d8;   
+     transition: 0.3s;
+    font-weight: 500;
+    border-radius: 9px;
+    font-size: 20px;
+}
+.service-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.btn-service{
+    transition: 0.3s;
+}
+.btn-service:hover{
+    background-color: #5a67d8;
+    color: white;
+    transition: 0.3s;
+
+}
+.service-card:hover{
+    scale: 1.03;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: var(--sb-thumb-color);
+    color: white;
+    transition: 0.3s;
+}
+
+.tx{
+    font-size: 30px;
+}
+body {
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #5a67d8;
+    --sb-size: 8px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 25px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 25px;
+    
+  }
+
+  .nv{
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2196078431372549);
+border-radius: 0px 0px 6px 6px ;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.6px);
+-webkit-backdrop-filter: blur(10.6px);
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+
+  .btn-3{
+    width: 181px;
+  }
+
+  @media (max-width: 765px) {
+    .img-1 {
+      order: 0 !important;
+    }
+    .img-2 {
+      order: 1 !important;
+    }
+    .btn-1{
+        width: 59%;
+    }
+    .btn-2{
+        width: 37%;
+    }
+  }
+  
