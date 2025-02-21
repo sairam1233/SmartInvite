@@ -5,7 +5,12 @@
 *{
     scroll-behavior: smooth;
 }
-
+.home{
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
 .bor{
     border-radius: 20px !important;
 }

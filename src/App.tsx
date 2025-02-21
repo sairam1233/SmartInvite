@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Toaster, toast } from 'react-hot-toast';
-import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+AOS.init();
 import {
   Mail,
   Phone,
@@ -75,7 +77,7 @@ function App() {
       <Toaster position="top-center" />
       
       {/* Navigation */}
-      <nav className="nv animate__animated animate__fadeInDown fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <nav data-aos="fade-down" className="nv animate__animated animate__fadeInDown fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex-shrink-0 flex items-center">
@@ -109,30 +111,34 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 overflow-hidden">
+      <section  className="home relative min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-5"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-600/10 to-purple-600/10"></div>
         <div className="relative min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="max-w-3xl py-20 md:py-0">
-            <span className="animate__animated animate__fadeInDown inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 mb-6">
+            <span data-aos="fade-right" className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800 mb-6">
               <Sparkles className="h-4 w-4 mr-2" />
               Revolutionizing Digital Invitations
             </span>
-            <h1 className="animate__animated animate__fadeInLeft text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
+            <h1 data-aos="fade-right" className=" text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
               Get <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Your Stunning</span> Digital Invitations
             </h1>
-            <p className="animate__animated animate__fadeInLeft text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 sm:mb-10 leading-relaxed max-w-2xl">
+            <p data-aos="fade-right" className="animate__animated animate__fadeInLeft text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 sm:mb-10 leading-relaxed max-w-2xl">
               Transform your special moments with interactive, beautiful, and eco-friendly digital invitations that leave lasting impressions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-1 animate__animated animate__fadeInUp bg-indigo-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
-                <a href='#contact'>Get Your First Invitation</a>
+            <a href='#contact'>
+              <button data-aos="fade-up" data-aos-duration="3000" className="btn-1 animate__animated animate__fadeInUp bg-indigo-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+                Get Your First Invitation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="btn-2 animate__animated animate__fadeInUp bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-indigo-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
-                <a href='#demo'>View Demo</a>
+              </a>
+              <a href='#demo'>
+              <button data-aos="fade-up" data-aos-duration="3000" className="btn-2 animate__animated animate__fadeInUp bg-white text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-indigo-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+                View Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
+              </a>
             </div>
           </div>
         </div>
@@ -146,14 +152,15 @@ function App() {
             <div className="relative order-2 md:order-1 img-1">
               <div className="absolute -top-4 -left-4 w-48 sm:w-72 h-48 sm:h-72 bg-indigo-100 rounded-lg -z-10"></div>
               <img
+               data-aos="fade-right"
               src="./images/screely-1739947297001.png"
               alt="Digital Invitation Platform"
               className="rounded-lg shadow-2xl w-full animate__animated animate__fadeInLeft"
             />
             </div>
-            <div className="order-1 md:order-2 img-2 animate__animated animate__fadeInRight">
+            <div data-aos="fade-left" className="order-1 md:order-2 img-2 animate__animated animate__fadeInRight">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
-                <span className="block text-indigo-600 text-base sm:text-lg font-medium mb-2">About Us</span>
+                <span data-aos="fade-up" className="block text-indigo-600 text-base sm:text-lg font-medium mb-2">About Us</span>
                 The Future of Event Invitations
               </h2>
               <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-600">
@@ -166,10 +173,12 @@ function App() {
                   leave a lasting impression on your guests.
                 </p>
                 <div className="grid grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
+                <a href='#contact'>
                 <button className="btn-3 animate__animated animate__fadeInUp bg-indigo-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
                   <a href='#contact'>Contact Us</a>
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
+                </a>
                 </div>
               </div>
             </div>
@@ -182,10 +191,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate__animated animate__fadeInUp text-center max-w-3xl mx-auto mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              <span className="block text-indigo-600 text-base sm:text-lg font-medium mb-2">Our Services</span>
+              <span data-aos="fade-up" className="block text-indigo-600 text-base sm:text-lg font-medium mb-2">Our Services</span>
               Everything You Need for Perfect Invitations
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600">Choose from our range of premium services to create the perfect invitation experience.</p>
+            <p data-aos="fade-up" className="text-lg sm:text-xl text-gray-600">Choose from our range of premium services to create the perfect invitation experience.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
@@ -196,14 +205,16 @@ function App() {
               { icon: Palette, title: 'Custom Themes & Music', description: 'Match invitations to your event\'s vibe' },
               { icon: Calendar, title: 'Live RSVP Management', description: 'Track attendance effortlessly' }
             ].map((service, index) => (
-              <div key={index} className="animate__animated animate__fadeInUp service-card bg-white p-6 sm:p-8 rounded-xl shadow-lg ">
+              <div data-aos="fade-up" key={index} className="animate__animated animate__fadeInUp service-card bg-white p-6 sm:p-8 rounded-xl shadow-lg ">
                 <service.icon className="h-10 w-10 sm:h-12 sm:w-12 text-indigo-600 mb-4 sm:mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">{service.title}</h3>
                 <p className="pp text-gray-600 mb-4 sm:mb-6">{service.description}</p>
-                <button className="btn-service bg-indigo-50 text-indigo-600 px-4 sm:px-6 py-2 rounded-lg font-semibold group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 flex items-center text-sm sm:text-base">
-                  <span><a href='#contact'>Book Now</a></span>
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </button>
+                <a href='#contact'>
+                  <button className="btn-service bg-indigo-50 text-indigo-600 px-4 sm:px-6 py-2 rounded-lg font-semibold group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 flex items-center text-sm sm:text-base">
+                    <span><a href='#contact'>Book Now</a></span>
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </button>
+                </a>
               </div>
             ))}
           </div>
@@ -214,11 +225,11 @@ function App() {
       <section id="demo" className="py-20 sm:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate__animated animate__fadeInUp text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-3xl  sm:text-4xl font-bold text-gray-900 mb-4">
-              <span className="block text-indigo-600 text-base sm:text-lg font-medium mb-2">Demo Projects</span>
+            <h2 data-aos="fade-up" className="text-3xl  sm:text-4xl font-bold text-gray-900 mb-4">
+              <span data-aos="fade-up" className="block text-indigo-600 text-base sm:text-lg font-medium mb-2">Demo Projects</span>
               See Our Smart Invitations in Action
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600">Explore our collection of beautifully crafted digital invitations.</p>
+            <p data-aos="fade-up" className="text-lg sm:text-xl text-gray-600">Explore our collection of beautifully crafted digital invitations.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
@@ -265,7 +276,7 @@ function App() {
                     link:"https://smart-wedding-demo-a5n1.vercel.app/",
                   },
                 ].map((demo) => (
-              <div key={demo.id} className=" animate__animated animate__fadeInUp group relative overflow-hidden rounded-xl    hover:shadow-xl transition-all duration-300">
+              <div data-aos="fade-up" key={demo.id} className=" animate__animated animate__fadeInUp group relative overflow-hidden rounded-xl    hover:shadow-xl transition-all duration-300">
                 <div className="aspect-w-16 aspect-h-9">
                   <img
                     src={demo.image}
@@ -279,10 +290,12 @@ function App() {
                       {demo.category}
                     </span>
                     <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 sm:mb-4">{demo.title}</h3>
+                    <a href={demo.link} target='_blank'>
                     <button className="inline-flex items-center space-x-2 text-white font-medium group">
                       <span><a href={demo.link} target='_blank'>View Demo</a></span>
                       <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                     </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -296,13 +309,13 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="animate__animated animate__fadeInUp text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                <span className="block tx text-indigo-600 text-base sm:text-lg font-medium mb-2">Contact Us</span>
+              <h2 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                <span data-aos="fade-up" className="block tx text-indigo-600 text-base sm:text-lg font-medium mb-2">Contact Us</span>
                 Let's Create Something Special Together
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600">Have questions? We're here to help you create the perfect invitation.</p>
+              <p data-aos="fade-up" className="text-lg sm:text-xl text-gray-600">Have questions? We're here to help you create the perfect invitation.</p>
             </div>
-            <div className=" animate__animated animate__fadeInUp bg-white rounded-2xl shadow-2xl bor overflow-hidden">
+            <div data-aos="fade-up" className=" animate__animated animate__fadeInUp bg-white rounded-2xl shadow-2xl bor overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 ">
                 <div className="p-6 sm:p-8 md:p-12">
                   <form ref={formRef} onSubmit={handleSubmit} className=" space-y-4 sm:space-y-6">
@@ -412,7 +425,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="animate__animated animate__fadeInUp bg-gray-900 text-white pt-16 sm:pt-20 pb-8 sm:pb-10">
+      <footer data-aos="fade-up" className="animate__animated animate__fadeInUp bg-gray-900 text-white pt-16 sm:pt-20 pb-8 sm:pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
             <div className="space-y-4">
