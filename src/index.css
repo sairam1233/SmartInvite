@@ -75,22 +75,32 @@ body {
   body::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
     border-radius: 25px;
+    overflow-x: hidden;
     
   }
 
   .nv{
     /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2196078431372549);
-border-radius: 0px 0px 6px 6px ;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10.6px);
--webkit-backdrop-filter: blur(10.6px);
+      background: rgba(255, 255, 255, 0.2196078431372549);
+      border-radius: 0px 0px 6px 6px ;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10.6px);
+      -webkit-backdrop-filter: blur(10.6px);
+      overflow-x: hidden;
   }
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
   
   @supports not selector(::-webkit-scrollbar) {
     body {
       scrollbar-color: var(--sb-thumb-color)
                        var(--sb-track-color);
+      display: none;
     }
   }
 
@@ -114,3 +124,14 @@ backdrop-filter: blur(10.6px);
   
   }
   
+
+  /* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensures no extra space is taken */
+html, body {
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}

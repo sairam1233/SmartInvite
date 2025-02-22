@@ -429,14 +429,14 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
             <div className="space-y-4">
-              <div className="flex items-center">
+              <div data-aos="fade-up" className="flex items-center">
                 <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-indigo-400" />
                 <span className="ml-2 text-lg sm:text-xl font-bold">SmartInvite</span>
               </div>
-              <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
+              <p data-aos="fade-up" className="text-gray-400 leading-relaxed text-sm sm:text-base">
                 Creating memorable digital invitations for your special moments. Join us in making event planning sustainable and beautiful.
               </p>
-              <div className="flex space-x-4 pt-4">
+              <div data-aos="fade-up" className="flex space-x-4 pt-4">
                 <a href="https://www.facebook.com/share/1GuWeQtgHa/" target='_blank' className="bg-gray-800 p-2 rounded-lg text-gray-400 hover:text-white hover:bg-indigo-600 transition-all duration-300">
                   <Facebook className="h-5 w-5" />
                 </a>
@@ -452,8 +452,8 @@ function App() {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4 sm:mb-6">Quick Links</h3>
-              <ul className="space-y-3 sm:space-y-4">
+              <h3 data-aos="fade-up" className="text-lg font-semibold mb-4 sm:mb-6">Quick Links</h3>
+              <ul data-aos="fade-up" className="space-y-3 sm:space-y-4">
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><ArrowRight className="h-4 w-4 mr-2" />Home</a></li>
                 <li><a href="#about" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><ArrowRight className="h-4 w-4 mr-2" />About</a></li>
                 <li><a href="#services" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><ArrowRight className="h-4 w-4 mr-2" />Services</a></li>
@@ -461,8 +461,8 @@ function App() {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4 sm:mb-6">Services</h3>
-              <ul className="space-y-3 sm:space-y-4">
+              <h3 data-aos="fade-up" className="text-lg font-semibold mb-4 sm:mb-6">Services</h3>
+              <ul data-aos="fade-up" className="space-y-3 sm:space-y-4">
                 <li><a href="#services" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><ArrowRight className="h-4 w-4 mr-2" />Wedding Invitations</a></li>
                 <li><a href="#services" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><ArrowRight className="h-4 w-4 mr-2" />Birthday Events</a></li>
                 <li><a href="#services" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><ArrowRight className="h-4 w-4 mr-2" />Corporate Events</a></li>
@@ -470,8 +470,8 @@ function App() {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4 sm:mb-6">Resources</h3>
-              <ul className="space-y-3 sm:space-y-4">
+              <h3 data-aos="fade-up" className="text-lg font-semibold mb-4 sm:mb-6">Resources</h3>
+              <ul data-aos="fade-up" className="space-y-3 sm:space-y-4">
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><Globe className="h-4 w-4 mr-2" />Blog</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><ArrowRight className="h-4 w-4 mr-2" />Help Center</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base"><ArrowRight className="h-4 w-4 mr-2" />Privacy Policy</a></li>
